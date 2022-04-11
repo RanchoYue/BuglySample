@@ -19,6 +19,6 @@ public class MyApplication extends Application {
          * 参数3：是否开启调试模式，调试模式下会输出'CrashReport'tag的日志
          */
         CrashReport.UserStrategy userStrategy = new CrashReport.UserStrategy(this);
-        CrashReport.initCrashReport(this, "ed8d153690", true);
+        CrashReport.initCrashReport(this, "ed8d153690", BuildConfig.DEBUG);
     }
 }
