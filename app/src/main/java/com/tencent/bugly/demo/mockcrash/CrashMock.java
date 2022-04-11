@@ -3,7 +3,7 @@ package com.tencent.bugly.demo.mockcrash;
 /**
  * Description:
  *
- * @author: rockypzhang
+ * @author: yue
  * Time: 2020/5/25
  */
 public class CrashMock {

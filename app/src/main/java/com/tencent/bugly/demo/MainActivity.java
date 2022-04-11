@@ -23,32 +23,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnTestANRCrash;
     private Button btnTestNativeCrash;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         btnTestJavaCrash = (Button) findViewById(R.id.btnTestJavaCrash);
         btnTestANRCrash = (Button) findViewById(R.id.btnTestANRCrash);
         btnTestNativeCrash = (Button) findViewById(R.id.btnTestNativeCrash);
         btnTestJavaCrash.setOnClickListener(this);
         btnTestANRCrash.setOnClickListener(this);
         btnTestNativeCrash.setOnClickListener(this);
-
-
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btnTestJavaCrash: // 点击测试Java Crash
+            case R.id.btnTestJavaCrash:
                 CrashMock.mockJavaCrash();
                 break;
-            case R.id.btnTestANRCrash: // 点击测试ANR Crash
+            case R.id.btnTestANRCrash:
                 CrashReport.testANRCrash();
                 break;
-            case R.id.btnTestNativeCrash: // 点击测试Native Crash
+            case R.id.btnTestNativeCrash:
                 CrashReport.testNativeCrash();
                 break;
         }
