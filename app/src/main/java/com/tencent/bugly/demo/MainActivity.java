@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestJavaCrash.setOnClickListener(this);
         btnTestANRCrash.setOnClickListener(this);
         btnTestNativeCrash.setOnClickListener(this);
+        TestJNI testJNI = new TestJNI();
+        findViewById(R.id.btnLocalNativeCrash).setOnClickListener(view -> {
+            testJNI.encrypt("hi crash");
+        });
     }
 
     @Override
